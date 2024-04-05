@@ -51,4 +51,50 @@ Third party packages
 
 Package.json files
 - Create a package.json file to automate package installation for other developers. Node's built-in module for file read and write operations simplifies managing modules and packages.
-- 
+
+------------------------------------------------------------------------------------------
+
+#Node modules
+
+node modules
+-  Reading from files
+    + The text discusses heavy input/output operations, specifically network and disk access, using demo.js as an example and requiring the 'fs' module and library.
+    + To read from a temporary JSON file, create an object with a property named 'name' and use the'readFile' function to access the file system. Alternatively, use an anonymous function or a concise arrow 
+      function.
+    + The execution encounters an unexpected output due to the absence of a specified file format. To resolve this, the callback is moved to the third parameter and 'UTF-8' is added.
+    + An alternative method involves accessing the JSON file using 'require' directly. By creating a 'data' variable and setting it to 'require' with the path to data.json, we can log the data. Now, we 
+      observe two distinct objects in our console - one from 'require' and another from 'readFile.'
+    + The'require' object is a true object, while the'readFile' object is a string. To resolve this, a new variable 'data' is created and converted to JSON.
+
+Directory access
+- Explore directory reading by using the 'fs' module and'readdir' function to access the file system, specifying the directory location to read, like Drive C.
+- Establish a callback, log data, save changes, execute demo with nodemon, and observe output for all directories in Drive C, illustrating the simple process of reading directories.
+
+Writing to Files
+- The text focuses on file writing, starting with file creation and using the writeFile function. The file name is passed as the first parameter, and the data is defined as a JSON object with a name of 'Bob'.
+- The script node demo.js generates a data.json file, but the content doesn't match expectations. To fix this, we convert the object to a string using JSON.stringify, resulting in the desired JSON format.
+- The script functions correctly, but a deprecation warning warns against calling an asynchronous function without a callback. A callback function is created, eliminating the warning and providing feedback.
+------------------------------------------------------------
+
+#Node file management and streams
+
+Node framework
+- what a framework is. In simple terms, it serves as a foundational structure, much like the support structure of a building or vehicle. In software development, a framework provides the essential structure that allows developers to build upon it.
+- Web frameworks are essential for web development, particularly for creating large APIs or HTTP servers.
+- They provide a structured foundation for tasks like serving static files or constructing web APIs.
+- Popular Node.js frameworks include Express, Sails, and Koa. Express is known for its simplicity, while Sails is a feature-rich framework with additional functionalities.
+- Koa is a modern framework with innovative features.
+
+Express
+- Express.js is a web framework designed for Node, supporting web applications and web APIs. Web applications are functionalities running on browsers or mobile devices, often communicating with servers for tasks like user authentication or data retrieval.
+- Express.js, a Node-based web app, enables communication with the back end of platforms like Twitter, despite its back-end nature. Its extensive community support and online documentation make it a valuable addition to the overall app.
+
+Socket.io
+- Socket.io offers real-time, two-way event-driven communication, addressing Express's limitation.
+- It combines a client-side library for browsers and a server-side library for Node.js, both with similar APIs.
+- The mechanism will be explored in a demonstration application.
+--------------------------------
+#Modual summary
+
+Moduale summary
+We created a robust chat application using Node.js, Socket.IO, and MongoDb-powered mLab. We explored synchronous and asynchronous code, handling tasks like callbacks, promises, and async/await. We embraced test-driven development, and if satisfied, explore with React or Angular frameworks.
